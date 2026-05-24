@@ -1,26 +1,148 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
+@layer base {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    --background: #f8fafc;
+    --foreground: #020617;
+    --card-bg: #e2e8f0;
+    --card-border: #cbd5e1; 
+    --text-primary: #0f172a;
+    --text-secondary: #475569;
+  }
+
+  .dark {
+    --background: #0f172a;
+    --foreground: #f8fafc;
+    --card-bg: #1e293b;
+    --card-border: #334155;
+    --text-primary: #ffffff;
+    --text-secondary: #94a3b8;
+  }
+
+  body {
+    background-color: var(--background);
+    color: var(--foreground);
+    transition: background-color 0.3s ease, color 0.3s ease;
+    overflow-x: hidden;
   }
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: #38bdf8;
+  border-radius: 4px;
+}
+
+/* --- Social Icons Wrapper --- */
+.wrapper {
+  display: inline-flex;
+  list-style: none;
+  height: auto;
+  width: auto;
+  font-family: "Poppins", sans-serif;
+  justify-content: center;
+}
+
+.wrapper .icon {
+  position: relative;
+  background: #ffffff !important; /* লাইট ও ডার্ক দুই মোডেই ব্যাকগ্রাউন্ড সবসময় পিওর হোয়াইট থাকবে */
+  border-radius: 50%;
+  margin: 10px;
+  width: 50px;
+  height: 50px;
+  font-size: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  transition: all 0.2s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+/* আইকনগুলোর কালার যেন ডার্ক মোডেও ডিফল্ট অবস্থায় ডার্ক-ব্ল্যাক থাকে (সাদা যেন না হয়ে যায়) */
+.wrapper .icon svg,
+.wrapper .icon i {
+  color: #0f172a !important;
+  fill: #0f172a !important;
+  transition: color 0.2s ease, fill 0.2s ease;
+}
+
+/* টুলটিপ ডিজাইন */
+.wrapper .tooltip {
+  position: absolute;
+  top: 0;
+  font-size: 14px;
+  background: #ffffff !important;
+  color: #ffffff !important;
+  padding: 5px 10px;
+  border-radius: 5px;
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+  opacity: 0;
+  pointer-events: none;
+  font-weight: 700;
+  transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.wrapper .tooltip::before {
+  position: absolute;
+  content: "";
+  height: 8px;
+  width: 8px;
+  background: #ffffff !important;
+  bottom: -3px;
+  left: 50%;
+  transform: translate(-50%) rotate(45deg);
+  transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.wrapper .icon:hover .tooltip {
+  top: -45px;
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+}
+
+/* --- HOVER EFFECTS (আইকন ও টুলটিপের ব্যাকগ্রাউন্ড কালার এবং আইকনের নিজস্ব কালার হোয়াইট করা) --- */
+
+/* Facebook Hover */
+.wrapper .facebook:hover,
+.wrapper .facebook:hover .tooltip,
+.wrapper .facebook:hover .tooltip::before {
+  background: #1877f2 !important;
+  color: #ffffff !important;
+}
+.wrapper .facebook:hover svg {
+  color: #ffffff !important;
+  fill: #ffffff !important;
+}
+
+/* LinkedIn Hover */
+.wrapper .linkedin:hover,
+.wrapper .linkedin:hover .tooltip,
+.wrapper .linkedin:hover .tooltip::before {
+  background: #0077b5 !important;
+  color: #ffffff !important;
+}
+.wrapper .linkedin:hover svg {
+  color: #ffffff !important;
+  fill: #ffffff !important;
+}
+
+/* GitHub Hover */
+.wrapper .github:hover,
+.wrapper .github:hover .tooltip,
+.wrapper .github:hover .tooltip::before {
+  background: #24292e !important;
+  color: #ffffff !important;
+}
+.wrapper .github:hover svg {
+  color: #ffffff !important;
+  fill: #ffffff !important;
 }
