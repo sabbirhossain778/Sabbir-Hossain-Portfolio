@@ -1,36 +1,42 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# MERN Stack Developer Portfolio 🚀
 
-## Getting Started
+স্বাগতম! এটি আমার ব্যক্তিগত পোর্ফোলিও ওয়েবসাইট, যা Next.js ১৫, React এবং Tailwind CSS ব্যবহার করে তৈরি করা হয়েছে। এই প্ল্যাটফর্মটিতে আমার তৈরি করা সেরা প্রজেক্টস, স্কিলস এবং আমার ব্যাকএন্ড ও ফ্রন্টএন্ড দক্ষতার একটি বাস্তব প্রতিফলন রয়েছে।
 
-First, run the development server:
+## 📸 Preview
+![Portfolio Screenshot](./sabbir-portfolio.png)
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+---
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## ✨ Features
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+- **Modern & Clean UI:** Tailwind CSS, DaisyUI এবং HeroUI দিয়ে তৈরি চমৎকার রেসপন্সিভ ইন্টারফেস।
+- **Dynamic Project Showcases:** প্রজেক্টের বিস্তারিত তথ্য, চ্যালেঞ্জ এবং ফিউচার প্ল্যানসহ ইন্টারেক্টিভ মডাল পপআপ সিস্টেম।
+- **Seamless Dark/Light Mode:** ইউজার এক্সপেরিয়েন্স উন্নত করতে স্মুথ থিম টগলিং ব্যবস্থা।
+- **Fully Responsive:** মোবাইল, ট্যাবলেট এবং ডেস্কটপসহ যেকোনো স্ক্রিন সাইজের জন্য পারফেক্টলি অপ্টিমাইজড।
+- **Clean Structure:** Next.js-এর আধুনিক অ্যাপ রাউটার (App Router) এবং কম্পোনেন্ট-বেসড আর্কিটেকচার।
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+---
 
-## Learn More
+## 🛠️ Tech Stack
 
-To learn more about Next.js, take a look at the following resources:
+**Frontend:**
+- Next.js 15 (App Router)
+- React.js
+- Tailwind CSS (DaisyUI / HeroUI)
+- React Icons
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+**Backend & Database:**
+- Node.js & Express.js (For full-stack integration)
+- MongoDB Atlas & Mongoose
+- Better-Auth (Secure Authentication System)
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+---
 
-## Deploy on Vercel
+## 🚀 Getting Started
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+প্রজেক্টটি লোকালি রান করতে চাইলে নিচের স্টেপগুলো ফলো করো:
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+১. **ক্লোন করো রিপোজিটরি:**
+   ```bash
+   git clone [https://github.com/sabbirhossain778/A5-Portfolio.git](https://github.com/sabbirhossain778/A5-Portfolio.git)
+   cd A5-Portfolio
